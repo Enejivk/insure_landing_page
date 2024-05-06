@@ -13,5 +13,9 @@ const openIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
         MenuIcon.innerHTML = openIcon
     }
 };
-
 MenuIcon.addEventListener('click', toggleMenu)
+window.addEventListener('scroll', () =>{
+    if(menuList.classList.contains('remove-menu')){
+        menuList.classList.remove('remove-menu')
+        MenuIcon.innerHTML = closeIcon
+})
